@@ -4,19 +4,20 @@ import numpy as np
 import tensorflow as tf
 import pickle
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder,StandardScaler
+from pathlib import Path
 
-#Load the trained model
-model=tf.keras.models.load_model('model.h5')
+BASE_DIR = Path(__file__).resolve().parent#Load the trained model
+model=tf.keras.models.load_model(BASE_DIR / 'model.h5')
 
 #Load the OneHotEncoder and LabelEncoder objects
-with open('ohe_geography.pkl', 'rb') as f:
+with open(BASE_DIR / 'ohe_geography.pkl', 'rb') as f:
     ohe_geography = pickle.load(f)
 
-with open('le_gender.pkl', 'rb') as f:
+with open(BASE_DIR / 'le_gender.pkl', 'rb') as f:
     le_gender = pickle.load(f)
 
 #Load the StandardScaler object
-with open('scaler.pkl', 'rb') as f:
+with open(BASE_DIR / 'scaler.pkl', 'rb') as f:
     scaler = pickle.load(f)
 
 ##Streamlitapp
