@@ -1,8 +1,8 @@
-# Environment variables / secrets
-.env
-
 # Virtual environment
 .venv/
+
+# Environment variables / secrets
+.env
 
 # Python cache
 __pycache__/
@@ -20,3 +20,5 @@ Thumbs.db
 
 # Logs
 *.log
+
+.env
