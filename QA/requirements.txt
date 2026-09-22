@@ -1,0 +1,6 @@
+langchain-ollama
+pandas
+langchain
+python-dotenv
+langchain_community
+numpy
